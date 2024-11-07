@@ -10,7 +10,7 @@ const postReview = async(req, res)=>{
             reviewContent,
             reviewerName,
         })
-        if(img.trim()) new_review.img.push(img)
+        if(img.trim()) new_review.img = img
         new_review.save()
         res.json({message: "new book review have been created"})
     } catch (error) {
